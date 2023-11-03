@@ -1,0 +1,16 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attribu, es.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args" : ["--batch_size", "16", "--lr_gen", "0.0005", "--lr_dis", "0.00001", "--lr_gan", "0.00001"]//, , "--comet", "mt" , "--g_path", "../../models/150_g.h5"
+        }
+    ]
+}

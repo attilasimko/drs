@@ -1,0 +1,5 @@
+h5py==3.1.0
+matplotlib==3.5.1
+numpy==1.19.5
+opencv-python==4.6.0.66
+tensorflow-gpu==2.5.0

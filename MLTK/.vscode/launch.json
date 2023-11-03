@@ -1,0 +1,16 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["--data_path", "DS0041/", "--out_path", "out/", "--lr_gen", "0.001", "--comet", "MT", "--batch_size", "20", "--n_epochs", "500", "--lr_dis", "0.005", "--lr_gan", "0.0005", "--g_path", "starts/75_g.h5", "--d_path", "starts/75_d.h5"]
+        }
+    ]
+}
