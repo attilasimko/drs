@@ -636,32 +636,25 @@ class mri_downsample{
         this.old_pe = 1;
         this.old_fe = 1;
         
-        var slider = document.getElementById(this.peId);
-        slider.tag = this;
-        slider.oninput = function() 
+        var slider_pe = document.getElementById(this.peId);
+        slider_pe.tag = this;
+        slider_pe.oninput = function() 
         {
             this.tag.tick();
+            var label = document.getElementById(this.tag.labelId);
+            label.innerHTML = (10 - this.value) + ' sec';
         }
         
-        var slider = document.getElementById(this.feId);
-        slider.tag = this;
-        slider.oninput = function() 
+        var slider_fe = document.getElementById(this.feId);
+        slider_fe.tag = this;
+        slider_fe.oninput = function() 
         {
             this.tag.tick();
         }
 
         this.tick();
-        if (labelId != "")
-        {
-            var label = document.getElementById(this.labelId);
-            var slider = document.getElementById(this.peId);
-            label.innerHTML = (10 - slider.value) + ' sec';
-            slider.oninput = function() 
-            {
-                label.innerHTML = (10 - this.value) + ' sec';
-            }
-
-        }
+        var label = document.getElementById(this.labelId);
+        label.innerHTML = (10 - slider_pe.value) + ' sec';
     }
 
     draw = (canvas, pe, fe) => {
